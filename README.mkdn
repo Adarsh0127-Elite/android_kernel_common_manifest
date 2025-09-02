@@ -1,0 +1,49 @@
+### For Building
+
+Create Android-kernel folder
+----------------------------------
+
+    mkdir ~/android
+    cd ~/android
+
+GIT config (nickname, e-mail)
+-----------------------------
+
+    git config --global user.email "mail@domain.com"
+    git config --global user.name "login"
+
+To initialize your local repository use
+---------------------------------------
+
+
+### Initialize local repository ###
+
+```bash
+git clone https://github.com/Adarsh0127-Elite/android_kernel_manifest.git
+```
+
+```bash
+repo init -u repo init -u https://android.googlesource.com/kernel/manifest
+```
+### Sync ###
+
+```bash
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+```
+
+### Build ###
+
+```bash
+
+# Set up environment
+$ . build/envsetup.sh
+
+# Choose a target
+$ blkilunch $device $build_type (for example - blkilunch raphael userdebug)
+
+# Build the code
+$ blki b
+
+# For Fastboot Package use:
+$ blki fb
+```
