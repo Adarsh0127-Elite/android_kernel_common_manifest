@@ -6,12 +6,6 @@ Create Android-kernel folder
     mkdir ~/android
     cd ~/android
 
-GIT config (nickname, e-mail)
------------------------------
-
-    git config --global user.email "mail@domain.com"
-    git config --global user.name "login"
-
 To initialize your local repository use
 ---------------------------------------
 
