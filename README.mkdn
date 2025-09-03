@@ -37,16 +37,5 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ### Build ###
 
 ```bash
-
-# Set up environment
-$ . build/envsetup.sh
-
-# Choose a target
-$ blkilunch $device $build_type (for example - blkilunch raphael userdebug)
-
-# Build the code
-$ blki b
-
-# For Fastboot Package use:
-$ blki fb
+tools/bazel build --config=fast //common:kernel_aarch64_dist
 ```
