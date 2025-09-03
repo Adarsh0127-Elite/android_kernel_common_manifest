@@ -1,4 +1,4 @@
-### For Building
+For Building Android Kernel
 
 Create Android-kernel folder
 ----------------------------------
@@ -17,7 +17,7 @@ git clone https://github.com/Adarsh0127-Elite/android_kernel_manifest.git
 ```
 
 ```bash
-repo init -u repo init -u https://android.googlesource.com/kernel/manifest
+repo init -u https://android.googlesource.com/kernel/manifest
 ```
 
 ```bash
@@ -32,6 +32,37 @@ repo init -m manifest.xml
 
 ```bash
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+```
+
+### Configs ###
+
+```bash
+sed -i "/stable_scmversion_cmd/s/-maybe-dirty//g" ./build/kernel/kleaf/impl/stamp.bzl
+```
+
+```bash
+nano common/build.config.gki
+```
+
+```bash
+nano common/arch/arm64/configs/gki_defconfig
+```
+```bash
+# Build flags
+CONFIG_LOCALVERSION="-Adarsh6969"
+```
+
+### For some Android 14 kernels, to make Wi-Fi/Bluetooth work, it might be necessary to remove all GKI protected exports: ###
+
+```bash
+nano common/BUILD.bazel
+```
+### Nuke this in common/BUILD.bazel ###
+```bash
+"protected_exports_list": "android/abi_gki_protected_exports_aarch64",
+```
+```bash
+rm common/android/abi_gki_protected_exports_*
 ```
 
 ### Build ###
