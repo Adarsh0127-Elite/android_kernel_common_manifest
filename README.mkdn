@@ -19,6 +19,15 @@ git clone https://github.com/Adarsh0127-Elite/android_kernel_manifest.git
 ```bash
 repo init -u repo init -u https://android.googlesource.com/kernel/manifest
 ```
+
+```bash
+mv manifest.xml .repo/manifests
+```
+
+```bash
+repo init -m manifest.xml
+```
+
 ### Sync ###
 
 ```bash
