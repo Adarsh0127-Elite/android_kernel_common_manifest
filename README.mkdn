@@ -47,8 +47,6 @@ nano common/build.config.gki
 
 ```bash
 nano common/arch/arm64/configs/gki_defconfig
-```
-```bash
 # Build flags
 CONFIG_LOCALVERSION="-adarshverse"
 ```
@@ -66,8 +64,23 @@ nano common/BUILD.bazel
 rm common/android/abi_gki_protected_exports_*
 ```
 
-### Build ###
+### Start Build your kernel ###
 
 ```bash
 tools/bazel build --config=fast //common:kernel_aarch64_dist
+```
+### For cleaning your build directory ###
+
+```bash
+tools/bazel clean --expunge
+```
+
+### Out directory ###
+
+```bash
+# Out Directory 
+bazel-out/k8-fastbuild/bin/common/kernel_aarch64/
+
+# If you wanna copy it to your home directory then use
+cp bazel-out/k8-fastbuild/bin/common/kernel_aarch64/Image ~/
 ```
