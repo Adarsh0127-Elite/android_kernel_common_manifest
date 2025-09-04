@@ -39,6 +39,8 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 sed -i "/stable_scmversion_cmd/s/-maybe-dirty//g" ./build/kernel/kleaf/impl/stamp.bzl
 ```
 
+### Here remove check_defconfig from ###
+POST_DEFCONFIG_CMDS="check_defconfig"
 ```bash
 nano common/build.config.gki
 ```
@@ -48,7 +50,7 @@ nano common/arch/arm64/configs/gki_defconfig
 ```
 ```bash
 # Build flags
-CONFIG_LOCALVERSION="-Adarsh6969"
+CONFIG_LOCALVERSION="-adarshverse"
 ```
 
 ### For some Android 14 kernels, to make Wi-Fi/Bluetooth work, it might be necessary to remove all GKI protected exports: ###
