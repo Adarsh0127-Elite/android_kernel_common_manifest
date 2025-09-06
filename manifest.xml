@@ -5,7 +5,7 @@
 
   <default revision="main-kernel-build-2023" remote="aosp" sync-j="4" />
 
-  <superproject name="kernel/superproject" remote="aosp" revision="common-android14-6.1-2025-07" />
+  <superproject name="kernel/superproject" remote="aosp" revision="common-android14-6.1-2024-06" />
 
   <project path="build/kernel" name="kernel/build" revision="19a5d59e812ce023f5c26aa4d6080e99ade17ffd">
     <linkfile dest="tools/bazel" src="kleaf/bazel.sh" />
@@ -17,17 +17,13 @@
     <linkfile dest="build/config.sh" src="config.sh" />
 </project>
 
-  <project path="common" name="kernel/common" revision="4e52994af56a91f19a6378606064c8e6d92ae973" upstream="android14-6.1-2025-07" dest-branch="android14-6.1-2025-07" />
+  <project path="common" name="kernel/common" revision="233cd6b58e4f649fb1ae02fb654ee3c7b0cea9f1" upstream="android14-6.1-2024-06" dest-branch="android14-6.1-2024-06" />
 
-  <project path="kernel/configs" name="kernel/configs" revision="bd79f38685cf939ab836dd8ddd2e01506ccff47a" upstream="main" dest-branch="main" />
+  <project path="kernel/tests" name="kernel/tests" revision="a2acaf18ab3d4ba873060a3041a90f68b2f1a414" />
 
-  <project path="kernel/tests" name="kernel/tests" revision="7b2005bacbf91c5c494abded85b3c7fea88862a8" upstream="main" dest-branch="main">
-    <linkfile dest="run_test_only.sh" src="tools/run_test_only.sh" />
+  <project path="kernel/configs" name="kernel/configs" revision="07e726fb7d0dc50ba6d8dcbbbe8def8d5ee9c573" />
 
-    <linkfile dest="launch_cvd.sh" src="tools/launch_cvd.sh" />
-</project>
-
-  <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="f2eb8e837a6d6a70b65d6916829f57b5c98e99f9" upstream="android14-6.1" dest-branch="android14-6.1" />
+  <project path="common-modules/virtual-device" name="kernel/common-modules/virtual-device" revision="31d55ad282832dbc009bc3b17deed6537c6ac969" upstream="android14-6.1" dest-branch="android14-6.1" />
 
   <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" revision="7775eb113f960bc69a780b621d03a715914d4bca" />
 
@@ -38,10 +34,6 @@
   <project path="prebuilts/clang-tools" name="platform/prebuilts/clang-tools" clone-depth="1" revision="f08a96e4015aed7c0341b880ccd85500b1b44a26" />
 
   <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" revision="e905be252a53d20c52bd9e59df3ff8fdd46b9eab" />
-
-  <project path="prebuilts/tradefed" name="platform/tools/tradefederation/prebuilts" revision="52121d9a4653ff92b9bd225bd417b6a288c36b58" clone-depth="1" upstream="main" dest-branch="main" />
-
-  <project path="prebuilts/asuite" name="platform/prebuilts/asuite" revision="d90d0060aedfd80f2119c1db5339a093f2758926" clone-depth="1" upstream="main" dest-branch="main" />
 
   <project path="tools/mkbootimg" name="platform/system/tools/mkbootimg" revision="615a1fced5f8e2755642d30357674d3bfa21b85e" />
 
