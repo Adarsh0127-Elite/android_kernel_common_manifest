@@ -1,4 +1,4 @@
-For Building Android Kernel
+httpsuilding Android Kernel
 
 Create Android-kernel folder
 ----------------------------------
@@ -12,7 +12,7 @@ To initialize your local repository use
 ### Initialize local repository ###
 
 ```bash
-git clone -b 6.1.78 https://github.com/Adarsh0127-Elite/android_kernel_manifest.git android && cd android
+git clone -b 6.1.93 https://github.com/Adarsh0127-Elite/android_kernel_manifest.git android && cd android
 ```
 
 ```bash
