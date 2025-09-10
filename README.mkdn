@@ -1,4 +1,4 @@
-httpsuilding Android Kernel
+Building Android Kernel
 
 Create Android-kernel folder
 ----------------------------------
@@ -16,7 +16,7 @@ git clone -b 6.1.93 https://github.com/Adarsh0127-Elite/android_kernel_manifest.
 ```
 
 ```bash
-repo init -u https://android.googlesource.com/kernel/manifest
+repo init -u https://android.googlesource.com/kernel/manifest --depth=1
 ```
 
 ```bash
@@ -24,7 +24,7 @@ mv manifest.xml .repo/manifests
 ```
 
 ```bash
-repo init -m manifest.xml
+repo init -m manifest.xml --depth=1
 ```
 
 ### Sync ###
