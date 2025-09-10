@@ -26,6 +26,11 @@ mv manifest.xml .repo/manifests
 ```bash
 repo init -m manifest.xml
 ```
+OR
+
+```bash
+mkdir ~/android && git clone -b 6.1.141 https://github.com/Adarsh0127-Elite/android_kernel_manifest.git android && cd android && repo init -u https://android.googlesource.com/kernel/manifest --depth=1 && mv manifest.xml .repo/manifests && repo init -m manifest.xml --depth=1 && repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+```
 
 ### Sync ###
 
