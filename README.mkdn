@@ -1,4 +1,4 @@
-Building Android Kernel
+For Building Android Kernel
 
 Create Android-kernel folder
 ----------------------------------
